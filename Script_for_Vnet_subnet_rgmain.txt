@@ -1,0 +1,32 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "3.104.2"
+    }
+  }
+}
+
+provider "azurerm" {
+  subscription_id = 
+  client_id       = 
+  client_secret   =
+  tenant_id       = 
+  features {}
+}
+resource "azurerm_resource_group" "azr_grp" {
+  name     = "azr-grp"
+  location = "Japan West" # e.g., "West US"
+}
+
+resource "azurerm_virtual_network" "azr_net" {
+  name                = "azr-net"
+  address_space       = ["10.0.0.0/16"] # Adjust CIDR block as needed
+  location            = "Japan West"
+  resource_group_name = "azr-grp"
+
+  subnet {
+    name           = "azr-sub"
+    address_prefix = "10.0.1.0/24" # Adjust subnet address prefix
+  }
+}
