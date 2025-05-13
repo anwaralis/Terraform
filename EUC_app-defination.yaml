@@ -1,0 +1,54 @@
+meta-data:	
+  manifest-schema: AppDefinition	
+  manifest-version: "0.01"	
+app-definition:	
+  itam-id: 535975	
+  name: INDIA SAS Sever	
+  description: INDIA SAS Sever	
+  is-platform-service: true	
+  bc: BC1	
+  sbia: 5	
+  ibs: true	
+  lob: Technology Strategy & Architecture (TSA)	
+  ito-unit: TSA-Solution Delivery	
+  materiality: true	
+  cots: In-House	
+  costcenter: "1231221"	
+  sre-support-dl: "GBL-ISCI-MEASSUPPORT@exchange.standardchartered.com"	
+  cvf-link: null	
+  workload-placement-link: null	
+  architecture-solution-intent-link: "https://confluence.global.standardchartered.com/display/ENTARCH/51212+-EUCSCB-IN"	
+  ibs-service:	
+    - NA	
+app-scope:	
+  internal-vs-external: Internal	
+  business-regions:	
+    - IN	
+  type-of-workload: Data & Analytics	
+  type-of-architecture: batch processing 	
+  resiliency-level: Geo standby 	
+  third-copy-data: Yes	
+  global-vs-regional: Global 	
+  saas-vs-iaas: NA	
+  is-hybrid: Yes 	
+app-stack:	
+  landing-zone:	
+    - 51460 #:HASHICORP SECRETS MGMT - ON PREM	
+    - 51318 #:OneMFA	
+    - 50591 #:OneCert SFG	
+	
+     app-stack:	
+    - GTS-2730:Redhat OpenJDK 17	
+    - GTS-2414:Apache Http Server	
+    - GTS-0090:SAS	
+	
+app-interfaces:	
+  - type: inbound	
+    name: EDMp-RB-RA-UA BA 	
+    external: false	
+    app-id: 50518	
+    mode: other-messaging	
+    protocol: ther-protocol	
+    ecn-exists: false	
+    tso: EUC - SCB IN PROD TSO	
+	
