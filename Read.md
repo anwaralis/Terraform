@@ -99,4 +99,12 @@ Below are the guidelines for updating app_definition_mf.yml
 | 4    | app-definition\itam-id     | Specify the ITAM-ID of your application.<br>Default value is “00000” | Integer | Yes | 10112 |
 | 5    | app-definition\name        | Specify the name of your application.<br>Use a common/name that is used across systems like CMDB or SNOW.<br>Default value is: "Sample Application" | String | Yes | Sample Application |
 | 6 | app-definition\description | Specify the business functionality or use-case or description of your application explaining the purpose of the app.|String|Yes|Sample Application's description|
+|7|app-definition\is-platform-service|Specify whether your application is Whether this application is platform service (PAAS)|Boolean|Yes|true|
+|8|app-definition\bc|Mention the business criticality of your application. BC5 being Most critical and BC1 being the least.<br>Allowed Values: (Enum)<br>1. BC1<br>2. BC2<br>3. BC3<br>4. BC4<br>5. BC5|String|Yes|BC1|
+|9|app-definition\sbia|Security Business Impact Assessment Rating<br>Allowed Values: (Enum)<br>1.1<br>2.2<br>3.3<br>4.4|Integer|Yes|1|
+|10|app-definition\ibs|Is Important Business Service?|Boolean|Yes|true|
+|11|app-definition\ibs-service|List of IBS service names . Refer https://confluence.global.standardchartered.com/pages/viewpage.action?pageId=2517007666|NA|Yes|ibs-service:<br>- "Transaction banking: Cash – Cross Border and Domestic Payments"|
+|12|app-definition\lob|Line Of Business of the application<br>Allowed Values: (Enum)<br>Refer LOB table in the below annexure section.|String|Yes|Technology Commercial, Corporate & Institutional Banking (CCIB|
+
+
 
