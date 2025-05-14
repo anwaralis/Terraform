@@ -98,4 +98,5 @@ Below are the guidelines for updating app_definition_mf.yml
 | 3    | app-definition             | Specify the definition details of your application. | NA | Yes |  |
 | 4    | app-definition\itam-id     | Specify the ITAM-ID of your application.<br>Default value is “00000” | Integer | Yes | 10112 |
 | 5    | app-definition\name        | Specify the name of your application.<br>Use a common/name that is used across systems like CMDB or SNOW.<br>Default value is: "Sample Application" | String | Yes | Sample Application |
+| 6 | app-definition\description | Specify the business functionality or use-case or description of your application explaining the purpose of the app.|String|Yes|Sample Application's description|
 
