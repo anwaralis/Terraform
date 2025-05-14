@@ -95,3 +95,7 @@ Below are the guidelines for updating app_definition_mf.yml
 |------|-------------------|-----------------------------------|-----------|-----------|--------------------|
 | 1    | meta-data\manifest-schema | To Specify/identify the type of Manifest.<br> Allowed Values:<br>•AppDefinition<br>•AppInstanceDefinition<br>•ComputeConfiguration<br>•StorageConfiguration<br>•NetworkConfiguration<br>•FirewallConfiguration<br>•LandingZoneConfiguration<br>•SecurityConfiguration<br>•ObservabilityConfiguration<br>•ContainerConfiguration | String | Yes | AppDefination |
 | 2    | meta-data\manifest-version | Version of app definition yaml.<br>Must be in the format/pattern of<br>“^\\d+.[0-9]{1,2}$” | String | Yes | 0.01 |
+| 3    | app-definition             | Specify the definition details of your application. | NA | Yes |  |
+| 4    | app-definition\itam-id     | Specify the ITAM-ID of your application.<br>Default value is “00000” | Integer | Yes | 10112 |
+| 5    | app-definition\name        | Specify the name of your application.<br>Use a common/name that is used across systems like CMDB or SNOW.<br>Default value is: "Sample Application" | String | Yes | Sample Application |
+
