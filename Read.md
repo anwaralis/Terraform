@@ -92,13 +92,4 @@ Release Engineering: Repo Structure - System Delivery Framework - Confluence (st
 Application Definition Manifest:
 Below are the guidelines for updating app_definition_mf.yml
 | S.No | Manifest Field | Description/what value goes in? 
-| 1    | To Specify/identify the type of Manifest.<br> Allowed Values:<br>AppDefinition
-AppInstanceDefinition
-ComputeConfiguration
-StorageConfiguration
-NetworkConfiguration
-FirewallConfiguration
-LandingZoneConfiguration
-SecurityConfiguration
-ObservabilityConfiguration
-ContainerConfiguration
+| 1    | To Specify/identify the type of Manifest.<br> Allowed Values:<br>•AppDefinition<br>•AppInstanceDefinition<br>•ComputeConfiguration<br>•StorageConfiguration<br>•NetworkConfiguration<br>•FirewallConfiguration<br>•LandingZoneConfiguration<br>•SecurityConfiguration<br>•ObservabilityConfiguration<br>•ContainerConfiguration
