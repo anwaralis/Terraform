@@ -1,0 +1,86 @@
+{
+  "stack" : {
+    "pattern_id" : "CD-INT-SR-001",
+    "version" : "v100.2",
+    "region_pair" : "Mumbai",
+    "csp" : "AWS",
+    "cloud_routing" : {
+      "network" : [ {
+        "capability_name" : "Cloud DNS",
+        "include" : [ "GTS-1150-Amazon Route 53" ]
+      }, {
+        "capability_name" : "Network Connectivity",
+        "include" : [ "GTS-718-AWS Direct Connect" ]
+      } ]
+    },
+    "cloud_account" : {
+      "tier-2" : {
+        "network" : [ {
+          "capability_name" : "Load Balancer",
+          "include" : [ "GTS-1078-Elastic Load Balancing (ELB)", "GTS-1078-Network Load Balancing (NLB)" ]
+        } ],
+        "compute" : [ {
+          "capability_name" : "Virtual Machines Auto Scaling",
+          "include" : [ "GTS-718-AWS Auto Scaling" ]
+        } ],
+        "storage" : [ {
+          "capability_name" : "Object Storage",
+          "include" : [ "GTS-718-Amazon Simple Storage Service (S3)" ]
+        }, {
+          "capability_name" : "Block Storage",
+          "include" : [ "GTS-718-Amazon Elastic Block Store (EBS)" ]
+        } ]
+      },
+      "non-vpc" : {
+        "security" : [ {
+          "capability_name" : "Secrets Management",
+          "include" : [ "GTS-4647-AWS Secrets Manager", "GTS-1080-HashiCorp Vault" ]
+        }, {
+          "capability_name" : "Key Management Service",
+          "include" : [ "GTS-763-AWS Key Management Service (KMS)" ]
+        }, {
+          "capability_name" : "Certificate Lifecycle Management",
+          "include" : [ "GTS-1471-AWS Certificate Manager" ]
+        } ],
+        "management" : [ {
+          "capability_name" : "Centralized Operations",
+          "include" : [ "GTS-1993-AWS Systems Manager" ]
+        } ],
+        "monitoring" : [ {
+          "capability_name" : "Infrastructure Monitoring",
+          "include" : [ "GTS-762-Amazon CloudWatch" ]
+        }, {
+          "capability_name" : "Standardized Logging",
+          "include" : [ "GTS-718-AWS CloudTrail" ]
+        }, {
+          "capability_name" : "Application Performance Monitoring",
+          "include" : [ "GTS-2604-Amazon OpenSearch Service (successor to Amazon Elasticsearch Service)" ]
+        }, {
+          "capability_name" : "Observability",
+          "include" : [ "GTS-2604-Amazon OpenSearch Service (successor to Amazon Elasticsearch Service)", "GTS-1794-Prometheus, Grafana" ]
+        }, {
+          "capability_name" : "Alerting",
+          "include" : [ "GTS-1188-TSOM" ]
+        } ]
+      }
+    },
+    "cloud_platform" : {
+      "security" : [ {
+        "capability_name" : "SIEM",
+        "include" : [ "GTS-4321-Splunk SIEM" ]
+      }, {
+        "capability_name" : "MFA",
+        "include" : [ "GTS-1917-MFA, Forgerock" ]
+      }, {
+        "capability_name" : "Identity Management Service",
+        "include" : [ "GTS-699-Active Directory" ]
+      }, {
+        "capability_name" : "Access Management",
+        "include" : [ "50553-SailPoint Identity IQ (OneCert)" ]
+      } ]
+    },
+    "custom_stack" : {
+      "include" : [ ]
+    }
+  }
+}
