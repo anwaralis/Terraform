@@ -1,0 +1,96 @@
+trigger:
+- main
+- develop
+- release/*
+
+parameters:
+ - name:        releaseId
+   type:        string
+   displayName: Release WorkItem ID
+   default:     ''
+
+variables:
+- group: 51212-nonprod # each team will have to use their own ITAM variable group
+
+resources:
+  repositories:
+    - repository: templates
+      name:       dj-core/governed-templates
+      ref:        main
+      type:       git
+
+extends:
+  template : governed-template/build-and-deploy.yml@templates
+  parameters:
+    ITAM: 51212
+    releaseId: ${{ parameters.releaseId }}
+    #runDevStage: true
+    buildStackName: generic
+    buildStackParams:
+      pool: sc-linux
+      skipEarlyFeedback: true
+      terraformFolderPathArchive: "$(Build.Repository.Name)"
+      terraformTargetPathArtifactory: 'cloud-release/com/sc/cloud/ado/gf/$(branchName)/$(Build.Repository.Name)/'
+      featureRelease: True
+    deployStackName: infra
+    featureRelease: True
+    deployStackParams:
+     cloudPlatformType: greenfield
+     cloudProvider: aws
+     projectCategory: application
+    deployEnvironments:
+      - name: dev
+        environment: dev
+        displayName: Development
+        pool: sc-linux
+        terraform:
+          cloudEnvironment: DEV                                  # this refers to the cloud environment that we are deploying into
+          cloudSvcAcctUsername: $(2504002-dev-svc-acct-username) # for dev release, use this username and password from the variable group <ITAM>-nonprod. # for stg and prd, use the other usernames and passwords from the variable group <ITAM>-prod.
+          cloudSvcAcctPassword: $(2504002-dev-svc-acct-password)
+      - name: staging
+        environment: staging
+        displayName: Staging
+        pool: sc-linux
+        terraform:
+          cloudEnvironment: "STAGING"
+          cloudSvcAcctUsername: $(2504002-stg-svc-acct-username)
+          cloudSvcAcctPassword: $(2504002-stg-svc-acct-password)
+        dependsOn:
+          - ci
+      # QA stage name is mandatory
+      # However you can change environment and displayName to 'Staging'
+      - name: qa
+        environment: qa
+        displayName: QA-Stg
+        pool: sc-linux
+        terraform:
+          cloudEnvironment: STAGING
+          cloudSvcAcctUsername: $(2504002-stg-svc-acct-username)
+          cloudSvcAcctPassword: $(2504002-stg-svc-acct-password)
+        hasTestManual: true
+        dependsOn:
+          - dev
+      - name: release_checks
+        environment: pre-release
+        displayName: Pre-Release
+        pool: sc-linux
+        runTerraform: true
+        dependsOn:
+          - qa
+      - name: release
+        environment: release
+        displayName: Release
+        pool: sc-linux
+        dependsOn:
+          - release_checks
+      - name: prod
+        environment: production
+        displayName: Production
+        pool: sc-linux
+        terraform:
+          cloudEnvironment: PROD
+          cloudSvcAcctUsername: $(2504002-prod-svc-acct-username)
+          cloudSvcAcctPassword: $(2504002-prod-svc-acct-password)
+        enableManualPIT: true
+        dependsOn:
+          - release
