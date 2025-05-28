@@ -41,3 +41,50 @@ authldapnss.so  cleanwork  jproxy   launcher     redirStdIO  sasmailer      sas-
 authldap.so     cntspawn   ke2j     motifxsassm  reshelper   sasm.elm.mime  sas-services-daemon.service  systeminfo  tkfixmachlist  tkssh
 authpam.so      elsconf    ke2s     objspawn     sasauth     sasperm        sasumgmt                     tkbridge    tkgridmon      vercon
 root@awaps1seuci001[bin] # cd
+
+
+ 
+
+Dear all,
+
+ 
+
+As mentioned in another thread a few days ago, I'm new to administering SAS on a Linux (Ubuntu) server, so apologies for the silly question.  It's a bit of a steep learning curve for me...
+
+ 
+
+One of the reasons we've installed SAS is to allow user to connect remotely to our server via client-side SAS (I think running under Windows -- he bought his own license).  Is there a way I can test if SAS/Connect has been installed correctly on my side before I let the user test it?  (I can ask him now, but I guess I should do some basic checks or else many people will not be too pleased with me.)
+
+ 
+
+I did come across this article (http://support.sas.com/kb/15/162.html), which lists the default ports used by SAS.  Clearly I would need to open up the firewall to these ports (i.e., 7551).  Anything else I need to be aware of?
+
+ 
+
+I guess another reason why I'm asking is that *I* don't have a license for the client version of SAS.  If I had that, then I could test it myself by reading server-side error messages.  Or, is there a very reduced version of SAS client that I could download (i.e., for free) which I could use to test SAS/Connect on the server?
+
+ 
+
+Thanks a lot for any advice!
+
+ 
+
+Ray
+
+
+Solution:
+Go to the machine that has the spawner running. It should have SAS and be licensed for SAS/CONNECT.
+Start SAS
+Run the following code:
+%let host=localhost 7551;
+signon host user='<your_user_id>' pwd='<your_pwd_on_host>';
+signoff;
+ 
+
+This will start SAS and run it as a SAS/CONNECT client to the spawner on the same machine using the default CONNECT server port.
+
+ 
+
+It that works provide the code to the user and replace 'localhost' with the fully-qualified host name of the spawner machine as the user would access it.
+
+ 
