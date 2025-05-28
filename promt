@@ -102,18 +102,29 @@ It that works provide the code to the user and replace 'localhost' with the full
 
 
 
-Hi ⁠Everyone
-For user to login to our SAS server, user generally use this below kind of scripts:
- %Let unix=10.128.48.105 5030;
-  Options Remote = Unix comamid = tcp ;
-  Signon Userid = a&sysuserid. passwd = "&psw.";
- 
-The above example is of jaidip's, Now after talking with @De, Jaidip I came to know that each group of user uses different port number with their script, so can you help here understand:
-•	What port number does your team uses to login to SAS server?
-•	Do we have this noted/documented somewhere (team-wise port number)?
-This will help us to make ports open in the inbound rules of the Security group for our EC2 (for our staging account). So that we can carry out our testing.
-Best,
+Hi Everyone,
+
+To access the SAS server, users typically connect using a script like the one below:
+
+sas
+Copy
+Edit
+%let unix=10.128.48.105 5030;
+options remote=unix comamid=tcp;
+signon userid=a&sysuserid. passwd="&psw.";
+The above is an example from Jaidip. After discussing with @De and Jaidip, I’ve learned that different user groups use different port numbers in their scripts.
+
+To proceed with configuring the inbound rules in the security group for our EC2 instance (staging account), we need the following information:
+
+What port number does your team use to log in to the SAS server?
+
+Is there a centralized document or list that maps port numbers to teams?
+
+Having this information will help ensure that all required ports are open for testing.
+
+Best regards,
 Anwar Shaikh
+
 
 
 
