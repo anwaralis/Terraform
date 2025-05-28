@@ -6,3 +6,8 @@ root@awaps1seuci001[home] # find / -name sas -type f 2>/dev/null
 /sas/sasinst/SASHome/SASFoundation/9.4/dbcs/sasexe/sas
 /sas/sasinst/SASHome/SASFoundation/9.4/sasexe/sas
 root@awaps1seuci001[home] #
+
+
+root@awaps1seuci001[home] # sudo netstat -tulnp | grep 5030
+root@awaps1seuci001[home] # sudo ss -tunlnp | grep 5030
+root@awaps1seuci001[home] # sudo iptables -L -n | grep 5030
