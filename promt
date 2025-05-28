@@ -83,6 +83,19 @@ signoff;
 
 This will start SAS and run it as a SAS/CONNECT client to the spawner on the same machine using the default CONNECT server port.
 
+
+
+root@awaps1seuci001[bin] # ls
+authcustom.so   bdm        elssrv   kj2e         patchname   sasauth.conf   sas-services-daemon          saswujms    tkdef.so       tkrproxy
+authgss.so      cfgpeh     gridrun  ks2e         rbrowser    sasgsub        sas-services-daemon.conf     setuid      tkdfasrv       tkrunas
+authldapnss.so  cleanwork  jproxy   launcher     redirStdIO  sasmailer      sas-services-daemon.init     setuid.sh   tkdocsetup     tks3client
+authldap.so     cntspawn   ke2j     motifxsassm  reshelper   sasm.elm.mime  sas-services-daemon.service  systeminfo  tkfixmachlist  tkssh
+authpam.so      elsconf    ke2s     objspawn     sasauth     sasperm        sasumgmt                     tkbridge    tkgridmon      vercon
+root@awaps1seuci001[bin] # pwd
+/sas/sasinst/SASHome/SASFoundation/9.4/utilities/bin
+root@awaps1seuci001[bin] #
+
+
  
 
 It that works provide the code to the user and replace 'localhost' with the fully-qualified host name of the spawner machine as the user would access it.
