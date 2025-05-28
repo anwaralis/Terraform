@@ -1,0 +1,8 @@
+root@awaps1seuci001[home] # find / -name sas -type f 2>/dev/null | grep SASFoundation
+/sas/sasinst/SASHome/SASFoundation/9.4/dbcs/sasexe/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/sasexe/sas
+root@awaps1seuci001[home] # find / -name sas -type f 2>/dev/null
+/var/spool/mail/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/dbcs/sasexe/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/sasexe/sas
+root@awaps1seuci001[home] #
