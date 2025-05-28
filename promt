@@ -100,4 +100,21 @@ root@awaps1seuci001[bin] #
 
 It that works provide the code to the user and replace 'localhost' with the fully-qualified host name of the spawner machine as the user would access it.
 
+
+
+Hi ⁠Everyone
+For user to login to our SAS server, user generally use this below kind of scripts:
+ %Let unix=10.128.48.105 5030;
+  Options Remote = Unix comamid = tcp ;
+  Signon Userid = a&sysuserid. passwd = "&psw.";
+ 
+The above example is of jaidip's, Now after talking with @De, Jaidip I came to know that each group of user uses different port number with their script, so can you help here understand:
+•	What port number does your team uses to login to SAS server?
+•	Do we have this noted/documented somewhere (team-wise port number)?
+This will help us to make ports open in the inbound rules of the Security group for our EC2 (for our staging account). So that we can carry out our testing.
+Best,
+Anwar Shaikh
+
+
+
  
