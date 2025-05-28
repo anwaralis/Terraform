@@ -11,3 +11,33 @@ root@awaps1seuci001[home] #
 root@awaps1seuci001[home] # sudo netstat -tulnp | grep 5030
 root@awaps1seuci001[home] # sudo ss -tunlnp | grep 5030
 root@awaps1seuci001[home] # sudo iptables -L -n | grep 5030
+
+
+root@awaps1seuci001[home] # find / -name sas -type f 2>/dev/null | grep SASFoundation
+/sas/sasinst/SASHome/SASFoundation/9.4/dbcs/sasexe/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/sasexe/sas
+root@awaps1seuci001[home] # find / -name sas -type f 2>/dev/null
+/var/spool/mail/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/dbcs/sasexe/sas
+/sas/sasinst/SASHome/SASFoundation/9.4/sasexe/sas
+root@awaps1seuci001[home] # ls -l /sas/sasinst/SASHome/SASFoundation/9.4/u
+u8/        ucmacros/  utilities/
+root@awaps1seuci001[home] # ls -l /sas/sasinst/SASHome/SASFoundation/9.4/utilities/bin/sasspawner
+ls: cannot access /sas/sasinst/SASHome/SASFoundation/9.4/utilities/bin/sasspawner: No such file or directory
+root@awaps1seuci001[home] # /sas
+bash: /sas: Is a directory
+root@awaps1seuci001[home] # cd sas\
+> ^C
+root@awaps1seuci001[home] # cd /sas
+root@awaps1seuci001[sas] # cd sasinst/
+root@awaps1seuci001[sasinst] # cd SASHome/SASFoundation/9.4/utilities/
+root@awaps1seuci001[utilities] # ls
+bin  man  src
+root@awaps1seuci001[utilities] # cd bin/
+root@awaps1seuci001[bin] # ls
+authcustom.so   bdm        elssrv   kj2e         patchname   sasauth.conf   sas-services-daemon          saswujms    tkdef.so       tkrproxy
+authgss.so      cfgpeh     gridrun  ks2e         rbrowser    sasgsub        sas-services-daemon.conf     setuid      tkdfasrv       tkrunas
+authldapnss.so  cleanwork  jproxy   launcher     redirStdIO  sasmailer      sas-services-daemon.init     setuid.sh   tkdocsetup     tks3client
+authldap.so     cntspawn   ke2j     motifxsassm  reshelper   sasm.elm.mime  sas-services-daemon.service  systeminfo  tkfixmachlist  tkssh
+authpam.so      elsconf    ke2s     objspawn     sasauth     sasperm        sasumgmt                     tkbridge    tkgridmon      vercon
+root@awaps1seuci001[bin] # cd
