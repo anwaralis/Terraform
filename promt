@@ -102,28 +102,7 @@ It that works provide the code to the user and replace 'localhost' with the full
 
 
 
-Hi Everyone,
-
-To access the SAS server, users typically connect using a script like the one below:
-
-sas
-Copy
-Edit
-%let unix=10.128.48.105 5030;
-options remote=unix comamid=tcp;
-signon userid=a&sysuserid. passwd="&psw.";
-The above is an example from Jaidip. After discussing with @De and Jaidip, I’ve learned that different user groups use different port numbers in their scripts.
-
-To proceed with configuring the inbound rules in the security group for our EC2 instance (staging account), we need the following information:
-
-What port number does your team use to log in to the SAS server?
-
-Is there a centralized document or list that maps port numbers to teams?
-
-Having this information will help ensure that all required ports are open for testing.
-
-Best regards,
-Anwar Shaikh
+AWS .. Since it will be EC2 can you get the screenshot from the servers showing SentinelOne agent running ? 
 
 
 
