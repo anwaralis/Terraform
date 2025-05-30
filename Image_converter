@@ -2,3 +2,9 @@ from SC:
 Save png in this:   C:\Users\1307847
 [Convert]::ToBase64String([IO.File]::ReadAllBytes(".\test.png")) > "encoded_image.txt"
 
+
+From personal:  
+Save png in this:  C:\Users\Test
+$base64 = Get-Content "C:\Users\Test\encoded_image.txt" -Raw
+[IO.File]::WriteAllBytes("C:\Users\Test\test.png", [Convert]::FromBase64String($base64))
+
