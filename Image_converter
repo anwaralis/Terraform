@@ -1,3 +1,4 @@
 from SC:
+Save png in this:   C:\Users\1307847
 [Convert]::ToBase64String([IO.File]::ReadAllBytes(".\test.png")) > "encoded_image.txt"
 
