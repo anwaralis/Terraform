@@ -1,1 +1,4 @@
 This repo contains terraform files
+
+
+In order to execute UAT and Business functionality test cases, suggested the cloud team to create a AD account. Cloud Team to provisoin the AD account to perform further test. Also certain ports need to be enabled from AWS console, so user can access SAS remotely
