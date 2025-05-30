@@ -124,6 +124,17 @@ cd "C:\Users\1307847\OneDrive - Standard Chartered Bank\Desktop\anwar\anwar"
 [Convert]::ToBase64String([IO.File]::ReadAllBytes("test.png")) > encoded_image.txt
 
 
+PS C:\Users\1307847\OneDrive - Standard Chartered Bank\Desktop\anwar\anwar> [Convert]::ToBase64String([IO.File]::ReadAllBytes("test.png")) > encoded_image.txt
+Exception calling "ReadAllBytes" with "1" argument(s): "Could not find file 'C:\Users\1307847\test.png'."
+At line:1 char:1
++ [Convert]::ToBase64String([IO.File]::ReadAllBytes("test.png")) > enco ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : FileNotFoundException
+
+PS C:\Users\1307847\OneDrive - Standard Chartered Bank\Desktop\anwar\anwar>
+
+
 
 
  
