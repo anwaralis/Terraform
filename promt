@@ -105,17 +105,277 @@ It that works provide the code to the user and replace 'localhost' with the full
 AWS .. Since it will be EC2 can you get the screenshot from the servers showing SentinelOne agent running ? 
 
 
-migrationuser@awaps1seuci001[home] $ sudo /opt/sentinelone/bin/sentinelctl status
+migrationuser@awaps1seuci001[home] $ sudo /opt/sentinelone/bin/sentinelctl status --all
 A subcommand is required
 Run with --help or --help-all for more information.
-migrationuser@awaps1seuci001[home] $ ls -l /opt/sentinelone/bin/
-ls: cannot open directory /opt/sentinelone/bin/: Permission denied
-migrationuser@awaps1seuci001[home] $ sudo ls -l /opt/sentinelone/bin/
-total 88424
--rwx------ 1 root lily  7462792 Jan 25  2024 addon-host
--rwx------ 1 root lily 14651448 Jan 25  2024 sentinelctl
--rwxr----- 1 root lily 62935256 Jan 25  2024 sentinelone-agent
--rwx------ 1 root lily  5484744 Jan 25  2024 sentinelone-watchdog
+migrationuser@awaps1seuci001[home] $ sudo /opt/sentinelone/bin/sentinelctl status -all
+A subcommand is required
+Run with --help or --help-all for more information.
+migrationuser@awaps1seuci001[home] $ sudo /opt/sentinelone/bin/sentinelctl status --help
+SentinelOne agent commandline control
+Usage: /opt/sentinelone/bin/sentinelctl [OPTIONS] SUBCOMMAND
+
+Options:
+  -h,--help                   Print this help message and exit
+  --help-all                  Expand all help
+
+Subcommands:
+  version                     Displays SentinelOne agent version
+  control                     Controls SentinelOne agent
+  log                         Log operations on SentinelOne agent
+  report                      Report operations on SentinelOne agent
+  asset                       Asset management operations on SentinelOne agent
+  engines                     Engines operations on SentinelOne agent
+  policy                      Policy operations on SentinelOne agent
+  management                  SentinelOne management console configuration
+  detector                    Operate on agent detectors
+  quarantine                  Quarantined files operations
+  scan                        SentinelOne agent disk scan operations
+  model                       Model operations
+  fw                          Firewall control operations
+  pod                         Pod operations
+  container                   container operations
+  connect                     Connect to a container and execute a command
+  mounts                      Mount points operations on SentinelOne agent
+  resource                    Resource limits
+  telemetry                   Telemetry operations
+  providers                   Providers operations
+  disk                        Filesystem and S1 Agent disk usage monitoring
+  heap_trimming               Heap trimming operations on SentinelOne agent
+  config                      Configuration operations
+  fips                        FIPS mode operations
+migrationuser@awaps1seuci001[home] $ sudo /opt/sentinelone/bin/sentinelctl status --help-all
+SentinelOne agent commandline control
+Usage: /opt/sentinelone/bin/sentinelctl [OPTIONS] SUBCOMMAND
+
+Options:
+  -h,--help                   Print this help message and exit
+  --help-all                  Expand all help
+
+Subcommands:
+version
+  Displays SentinelOne agent version
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+
+control
+  Controls SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    start                       Starts SentinelOne agent
+    stop                        Stops SentinelOne agent
+    status                      Displays SentinelOne agent status
+    uninstall                   Uninstalls SentinelOne agent
+    downgrade                   Downgrades SentinelOne agent
+    upgrade                     Upgrades SentinelOne agent
+    disable                     Disable SentinelOne agent
+    enable                      Enable SentinelOne agent
+
+log
+  Log operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    flush                       Flush log to disk
+    severity                    Operations regarding log severity
+    size                        Operations regarding log file size
+    generate                    Generates logs archive
+
+report
+  Report operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    summary                     Generate report summary
+    full                        Generate full report
+    status                      Generate status report
+    interval                    Configure reporting interval (seconds)
+
+asset
+  Asset management operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    reload                      Reloads asset content
+    print                       Prints asset content
+
+engines
+  Engines operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    status                      Display engines status
+    dfi                         Toggle DFI engine (on/off)
+    application-control         Toggle application control engine (on/off) - DEPRECATED
+    application_control         Application control operations
+
+policy
+  Policy operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    status                      Policy status
+    on-write                    On-Write evaluation of files (on/off)
+    on-execute                  On-Execute evaluation of files (on/off)
+    kill                        Kill mitigation of threats (on/off)
+    quarantine                  Quarantine files of threats (on/off)
+    network-quarantine          Set network quarantine (on/off)
+    mitigate-suspicious         Set suspicious threats mitigation (on/off)
+
+management
+  SentinelOne management console configuration
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    status                      Get management status
+    token                       Configuration of management console's registration token
+    url                         Configuration of management console's URL
+    type                        Configuration of current device type
+    uuid                        Configuration of agent UUID
+    app-inventory               Configure Application Inventory settings
+    machine-information         Configure machine information settings
+    customer_id                 Configuration of agent customer identifier
+    dv                          Configuration of Deep Visibility
+    proxy                       Configuration of management communication proxy
+    secured_protocol_mode       Configure mgmt secured protocol mode
+    auto_file_upload            Configure auto file upload settings
+
+detector
+  Operate on agent detectors
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    list                        List loaded detectors
+    reload                      Reload the detectors package
+    version                     Get detector package's version
+
+quarantine
+  Quarantined files operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    restore                     Restore quarantined files
+    list                        List quarantined files
+
+scan
+  SentinelOne agent disk scan operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    start                       Start disk scan
+    abort                       Abort currently running disk scan
+    status                      Disk scan current status and statistics
+
+model
+  Model operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    mark-group                  Marks group's status as malicious/suspicious
+    prune                       Model prune logic attributes
+
+fw
+  Firewall control operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    toggle                      toggle firewall control (on/off)
+    interval                    Configure firewall control interval (seconds)
+    quarantine                  Network quarantine operations
+
+pod
+  Pod operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    list                        list all running pods in the format: NAMESPACE POD-NAME CONTAINER-ID
+    exec                        Connect to a pod and execute a command
+                                IMPORTANT: use -- to separate the command to execute from the options of this ctl
+
+
+container
+  container operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    list                        list all running containers
+
+connect
+  Connect to a container and execute a command
+  Positionals:
+    container-name TEXT REQUIRED
+                                container-name to connect
+    program TEXT REQUIRED       program to run
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+
+mounts
+  Mount points operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    exclusion                   Operations regarding mount points exclusions
+
+resource
+  Resource limits
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    memory                      Configure memory limit
+    cpu                         Configure cpu limit
+
+telemetry
+  Telemetry operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    performance                 Performance telemetry operations
+
+providers
+  Providers operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    perf                        Perf provider operations
+    fanotify                    Fanotify provider operations
+    status                      Providers status
+
+disk
+  Filesystem and S1 Agent disk usage monitoring
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    monitor                     Operations regarding disk usage monitoring state
+
+heap_trimming
+  Heap trimming operations on SentinelOne agent
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    state                       Heap trimming state operations
+    interval                    Operations regarding heap trimming interval
+
+config
+  Configuration operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    dump                        Dump effective configuration to file
+    reload                      Reload configuration files
+    get                         Get configuration values
+    set                         Set configuration values
+    set-file                    Set configuration from a JSON file
+
+fips
+  FIPS mode operations
+  Options:
+    --passphrase TEXT           Set the passphrase without prompt
+  Subcommands:
+    status                      Get the current FIPS status
+    enable                      Enable FIPS mode
+    disable                     Disable FIPS mode
+
 
 
 
