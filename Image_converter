@@ -8,3 +8,11 @@ Save png in this:  C:\Users\Test
 $base64 = Get-Content "C:\Users\Test\encoded_image.txt" -Raw
 [IO.File]::WriteAllBytes("C:\Users\Test\test.png", [Convert]::FromBase64String($base64))
 
+
+$base64 = [Convert]::ToBase64String([IO.File]::ReadAllBytes("test.png"))
+$chunks = $base64 -split "(.{10000})" | Where-Object { $_ -ne "" }
+for ($i = 0; $i -lt $chunks.Count; $i++) {
+    $chunks[$i] | Out-File "chunk_$i.txt"
+}
+
+
