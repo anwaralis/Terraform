@@ -1,26 +1,9 @@
-Name	Operational status	Environment	Is Virtual	Model ID	IP Address	Operating System	OS Version
-INWVDPW01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.97	Windows 2012 R2 Standard	6.3M
-INWVDPW0002	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.193	Windows 2019 Standard	10.0.1
-INWVAPAPP20	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.110	Windows 2012 R2 Standard	6.3M
-INWVAPAPCR01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.12	Windows 2012 R2 Standard	6.3M
-INWVAPAPP11	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.104	Windows 2008 R2 Standard	6.1.76
-INWVAPPPRO01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.13	Windows 2019 Standard	10.0.1
-INWVAPAPP18	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.17	Windows 2012 R2 Standard	6.3M
-INWDPQSQL44	Operational	Production	FALSE	Dell Inc. PowerEdge Server R630	10.134.182.90	Windows 2008 R2 Enterprise	6.1.76
-INWDPQSQL01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.1	Windows 2012 R2 Standard	6.3M
-INWDPQSQL44	Operational	Production	FALSE	Dell Inc. PowerEdge Server R630	10.139.197.35	Windows 2012 R2 Standard	6.3M
-INWDPQSQL47	Operational	Production	FALSE	Dell Inc. PowerEdge Server R630	10.134.182.93	Windows 2012 R2 Standard	6.3M
-INWDPQSQL13	Operational	Production	FALSE	Dell Inc. PowerEdge Server R620	10.134.182.106	Windows 2008 R2 Enterprise	6.1.76
-INWDPQSQL03	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.10	Windows 2012 R2 Standard	6.3M
-INWDPQSQL03	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.10	Windows 2012 R2 Standard	6.3M
-INWVAPADRO1	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.14	Windows 2012 R2 Standard	6.3M
-INWVAPAML01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.83	Windows 2012 R2 Standard	6.3M
-INWVAPAPP29	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.188	Windows 2012 R2 Standard	6.3M
-INWVDPWQL03	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.139.195.134	Windows 2012 R2 Standard	6.3M
-INWVAPATFR01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.102	Windows 2012 R2 Standard	6.3M
-INWVAPPRMS01	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.15	Windows 2012 R2 Standard	6.3M
-INWVAPAPP13	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.71	Windows 2012 R2 Standard	6.3M
-INWVPAPCM31	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.134.189.77	Windows 2012 R2 Standard	6.3M
-INWDPQLSR01	Operational	Production	FALSE	Dell Inc. PowerEdge Server R630	10.134.182.96	Windows 2012 R2 Standard	6.3M
-INWDPQSQL02	Operational	Production	TRUE	VMware, Inc. VMware Virtual Platform	10.139.87.86	Windows 2019 Standard	10.0.1
-INWDPWRRM02	Operational	Production					
+HKLVATAPQ734.hk.standardchartered.com	10.7.30.126	Dev
+ 	 	 
+HKLVATAPQ735.hk.standardchartered.com	10.7.30.127	Dev
+ 	 	 
+HKLVATAPQ736.hk.standardchartered.com	10.7.30.128	Dev
+ 	 	 
+HKLVATAPQ737.hk.standardchartered.com	10.7.30.129	Dev
+ 	 	 
+HKLVATAPQ738.hk.standardchartered.com	10.7.30.130	Dev
