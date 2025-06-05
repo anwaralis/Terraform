@@ -1,9 +1,110 @@
-HKLVATAPQ734.hk.standardchartered.com	10.7.30.126	Dev
- 	 	 
-HKLVATAPQ735.hk.standardchartered.com	10.7.30.127	Dev
- 	 	 
-HKLVATAPQ736.hk.standardchartered.com	10.7.30.128	Dev
- 	 	 
-HKLVATAPQ737.hk.standardchartered.com	10.7.30.129	Dev
- 	 	 
-HKLVATAPQ738.hk.standardchartered.com	10.7.30.130	Dev
+Hello @Srinivasan, Kamalakannan,
+
+  User has been added to Centrify groups.
+
+distadm1@uklvadeci87[DEV][~] $ adquery user -a 1307847
+scbdev.net/ITSC/Groups/Application/SDRT-Apps-SCSIINFRA-SUPPORT-HPA-dev
+scbdev.net/ITSC/Groups/Application/SURT-USER-SS_group3-dev
+zone1.scbdev.net/Cloud/Azure/Groups/SUZ1-Users-Azure-250K-limit
+zone1.scbdev.net/ITSC/Groups/Application/SGZ1-Azure50kTestingGroup
+zone1.scbdev.net/ITSC/Groups/Application/SUZ1-USER-SHARE USER
+zone1.scbdev.net/ITSC/Groups/OneVault/Admins/SUZ1-OV_DEDICATED_ADMIN-SIT
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-DEV
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-SIT
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-UAT
+zone1.scbdev.net/ITSC/Groups/SUZ1-USER-DFS-READ-DEV
+zone1.scbdev.net/Unix/Admin/Groups/Users Group/SGZ1-CentrifyRole-Users-HK-DEV-PDW-SASVIYA
+zone1.scbdev.net/Unix/Admin/Groups/Users Group/SGZ1-Users-Centrify-Unix-ZPA-Users
+zone1.scbdev.net/Users/Domain Users
+distadm1@uklvadeci87[DEV][~] $
+
+Thanks & Regards
+___________________________________________________________________
+Veeresh Talagadi
+IT-TPS-ET CIS Compute & Web
+Standard Chartered Global Business Services Private Limited
+Mobile:    +919036544336
+E-mail:    veereshveerappa.talagadi@sc.com
+Address: RMZ Ecoworld,  6A,  9th Floor Bellandur,  Marathahalli ORR, 
+                Bangalore - 560103
+Website: www.sc.com
+
+Reach out TSS_Enterprise  via Group chat for quick response with valid IM Ticket
+___________________________________________________________________
+Please consider the environment before printing this email 
+ 
+
+From: Srinivasan, Kamalakannan <Kamalakannan.Srinivasan@sc.com> 
+Sent: Wednesday, June 4, 2025 6:16 PM
+To: S R, Gowtham Raaj <Gowthamraaj.Sr@sc.com>; Tech Support - Platforms - Unix Operations <TechSupport-Platforms-UnixOperations@sc.com>
+Cc: More, Yogita <Yogita.More@sc.com>
+Subject: RE: id 1307847
+
+INTERNAL
+
+Hi Gowtham,
+Pls find an INC# NINC2317954 for the same. Let us know once the tagging is completed.
+
+From: S R, Gowtham Raaj <Gowthamraaj.Sr@sc.com> 
+Sent: Wednesday, June 4, 2025 5:43 PM
+To: Srinivasan, Kamalakannan <Kamalakannan.Srinivasan@sc.com>; Tech Support - Platforms - Unix Operations <TechSupport-Platforms-UnixOperations@sc.com>
+Cc: More, Yogita <Yogita.More@sc.com>
+Subject: RE: id 1307847
+
+INTERNAL
+
+Hi @Srinivasan, Kamalakannan,
+Please submit an INC with INFRA UNIX DEV TSO SUP to tag the ID 1307847 to the below groups in comparison to your ID.
+
+zone1.scbdev.net/Unix/Admin/Groups/Users Group/SGZ1-CentrifyRole-Users-HK-DEV-PDW-SASVIYA
+zone1.scbdev.net/Unix/Admin/Groups/Users Group/SGZ1-Users-Centrify-Unix-ZPA-Users
+
+Thanks and Regards,
+ 
+Gowtham Raaj S R
+Senior Software Engineer, Application Runtimes & Automation Platforms,  
+Technology & Architecture (T&A) Software Engineering
+Standard Chartered Global Business Services
+
+Mobile:         +91 7339514682
+Email:           Gowthamraaj.Sr@sc.com 
+Address:      RMZ Ecoworld, Building 6A,  9th Floor, Bellandur, ORR, Bengaluru: 560 103, India
+Website :      www.sc.com/gbs/in
+ 
+
+From: Srinivasan, Kamalakannan <Kamalakannan.Srinivasan@sc.com> 
+Sent: Wednesday, June 4, 2025 3:10 PM
+To: S R, Gowtham Raaj <Gowthamraaj.Sr@sc.com>; Tech Support - Platforms - Unix Operations <TechSupport-Platforms-UnixOperations@sc.com>
+Cc: More, Yogita <Yogita.More@sc.com>
+Subject: id 1307847
+
+INTERNAL
+
+Hi Gowtham / Unix Ops team,
+Pls help to check this user account 1307847 and arrange to tag to zone1.scbdev.net/Unix/Admin/Groups/Users Group/SGZ1-CentrifyRole-Users-HK-DEV-PDW-SASVIYA to access to SAS Viya test platform.
+
+
+hklvatapq737:[sas]: /home/sas > id 1307847
+id: ‘1307847’: no such user
+
+
+hklvatapq737:[sas]: /home/sas > adquery user -a 1307847
+scbdev.net/ITSC/Groups/Application/SDRT-Apps-SCSIINFRA-SUPPORT-HPA-dev
+scbdev.net/ITSC/Groups/Application/SURT-USER-SS_group3-dev
+zone1.scbdev.net/Cloud/Azure/Groups/SUZ1-Users-Azure-250K-limit
+zone1.scbdev.net/ITSC/Groups/Application/SGZ1-Azure50kTestingGroup
+zone1.scbdev.net/ITSC/Groups/Application/SUZ1-USER-SHARE USER
+zone1.scbdev.net/ITSC/Groups/OneVault/Admins/SUZ1-OV_DEDICATED_ADMIN-SIT
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-DEV
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-SIT
+zone1.scbdev.net/ITSC/Groups/OneVault/Requestor/SUZ1-REQ_IN-OSV-WEST-UAT
+zone1.scbdev.net/ITSC/Groups/SUZ1-USER-DFS-READ-DEV
+
+_____________________________________________
+Kamalakannan Srinivasan
+Lead – Data Engineering
+IT Projects – CPBB Data Technology
+Email:kamalakannan.srinivasan@sc.com
+Address:Digital Zone 2, 6/F, Chennai
+Standard Chartered Bank, INDIA
+___________________________________________
