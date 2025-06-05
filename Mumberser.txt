@@ -106,5 +106,18 @@ Lead – Data Engineering
 IT Projects – CPBB Data Technology
 Email:kamalakannan.srinivasan@sc.com
 Address:Digital Zone 2, 6/F, Chennai
-Standard Chartered Bank, INDIA
+Standard Chartered Bank, INDIA>
+
+
+
+Account Name	Unlock	Password Reset	Owner
+1307847.dev@zone1.scbdev.net	Unlock account	Forgot password?	Claim ownership
+1307847@zone1.scbdev.net	Unlock account	Forgot password?	Claim ownership
+a.pss.1307847.dev@zone1.scbdev.net	Unlock account	Forgot password?	Claim ownership
+o.1307847.dev@zone1.scbdev.net	Unlock account	Forgot password?	1307847
+
+
+
+
+So I can see this 4 account attached to me in  Self-Service - Dev AD portal, which one should I unlock
 ___________________________________________
