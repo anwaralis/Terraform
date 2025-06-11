@@ -114,4 +114,7 @@ Ncat: Connection timed out.
 ---------------------------
 
 
+"Please confirm if outbound traffic from awaps1seuci001 to 10.7.30.126-130 on TCP ports 443, 7551, 8561 is allowed from the Security Group and NACL perspective. If unsure, temporarily open all outbound to those IPs for test.
+
+
  
