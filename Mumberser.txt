@@ -63,4 +63,55 @@ Address: 10.7.30.130
 
 migrationuser@awaps1seuci001[~] $
 
+
+
+migrationuser@awaps1seuci001[~] $ for ip in 10.7.30.126 10.7.30.127 10.7.30.128 10.7.30.129 10.7.30.130; do
+>   echo "Testing $ip ..."
+>   nc -zv $ip 7551
+>   nc -zv $ip 8561
+>   nc -zv $ip 443
+>   echo "---------------------------"
+> done
+Testing 10.7.30.126 ...
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+---------------------------
+Testing 10.7.30.127 ...
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+---------------------------
+Testing 10.7.30.128 ...
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+---------------------------
+Testing 10.7.30.129 ...
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+---------------------------
+Testing 10.7.30.130 ...
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+Ncat: Version 7.50 ( https://nmap.org/ncat )
+Ncat: Connection timed out.
+---------------------------
+
+
  
