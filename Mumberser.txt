@@ -7,4 +7,48 @@ HKLVATAPQ736.hk.standardchartered.com	10.7.30.128	Dev
 HKLVATAPQ737.hk.standardchartered.com	10.7.30.129	Dev
  	 	 
 HKLVATAPQ738.hk.standardchartered.com	10.7.30.130	Dev
+
+
+migrationuser@awaps1seuci001[~] $ nslookup hklvatapq734.hk.standardchartered.com
+Server:         10.137.128.194
+Address:        10.137.128.194#53
+
+Non-authoritative answer:
+Name:   hklvatapq734.hk.standardchartered.com
+Address: 10.7.30.126
+
+migrationuser@awaps1seuci001[~] $ nslookup hklvatapq735.hk.standardchartered.com
+Server:         10.137.128.194
+Address:        10.137.128.194#53
+
+Non-authoritative answer:
+Name:   hklvatapq735.hk.standardchartered.com
+Address: 10.7.30.127
+
+migrationuser@awaps1seuci001[~] $ nslookup hklvatapq736.hk.standardchartered.com
+Server:         10.137.128.194
+Address:        10.137.128.194#53
+
+Non-authoritative answer:
+Name:   hklvatapq736.hk.standardchartered.com
+Address: 10.7.30.128
+
+migrationuser@awaps1seuci001[~] $ nslookup hklvatapq737.hk.standardchartered.com
+Server:         10.137.128.194
+Address:        10.137.128.194#53
+
+Non-authoritative answer:
+Name:   hklvatapq737.hk.standardchartered.com
+Address: 10.7.30.129
+
+migrationuser@awaps1seuci001[~] $ nslookup hklvatapq738.hk.standardchartered.com
+Server:         10.137.128.194
+Address:        10.137.128.194#53
+
+Non-authoritative answer:
+Name:   hklvatapq738.hk.standardchartered.com
+Address: 10.7.30.130
+
+migrationuser@awaps1seuci001[~] $
+
  
