@@ -34,8 +34,7 @@ root      9940  9636  0 14:40 pts/0    00:00:00 grep --color=auto -i spawn
 root@awaps1seuci001[migrationuser] #
 
 
-migrationuser@awaps1seuci001[~] $ ls
-migrationuser@awaps1seuci001[~] $ cd /home
+migrationuser@awaps1seuci001[/] $ cd /home
 migrationuser@awaps1seuci001[home] $ ls
 1577341   a1307847  a1491047  a1545123  a1562977  a1595603  a1608080  a1621249  a1635337  a1646944  a1663901  a2008251  a8190137  geneossup      sas
 a1159451  a1310045  a1521362  a1546006  a1566313  a1599647  a1610491  a1623681  a1636577  a1647036  a1664197  a2008290  a8190649  infra1         sasdemo
@@ -50,42 +49,23 @@ a1240235  a1448328  a1534056  a1559626  a1583490  a1606721  a1620365  a1633530  
 a1256011  a1470408  a1536816  a1559840  a1587278  a1607309  a1620855  a1633588  a1645771  a1662475  a2006199  a2019511  emerg1    RAO_Dw_Usrs
 a1271899  a1481087  a1538544  a1560118  a1587578  a1607352  a1620879  a1634133  a1645841  a1663447  a2007858  a2024578  emerg2    RAO_Usrs
 a1288694  a1482121  a1543324  a1562661  a1590495  a1607697  a1621118  a1635246  a1645847  a1663691  a2008094  a8102358  geneos    RRS_usrs
+migrationuser@awaps1seuci001[home] $ cd sas
+-bash: cd: sas: Permission denied
 migrationuser@awaps1seuci001[home] $ cd /sas
 migrationuser@awaps1seuci001[sas] $ ls
 Install.txt  sasinst
-migrationuser@awaps1seuci001[sas] $ cd sasinst/
-migrationuser@awaps1seuci001[sasinst] $ ls
-SASHome  SASHome.tar
-migrationuser@awaps1seuci001[sasinst] $ cd SASHome/
-migrationuser@awaps1seuci001[SASHome] $ ls
-deploymntreg                            SASFoundation                                            SASSecureJavaM3
-InstallMisc                             SASHadoopConfigurationLibraries                          SASSecureJavaM4
-install.properties                      sas.java.ext.config                                      SASSecureJavaM5
-licenses                                SASODBCDriversfortheWebInfrastructurePlatformDataServer  SASSecurityCertificateFramework
-perms.sh                                SASODSGraphicsCRenderer                                  sassw.config
-ReportFontsforClients                   SASODSGraphicsDesigner                                   SASVersionedJarRepository
-SAS94_9CL8HR_11600037_LINUX_X86-64.txt  SASODSGraphicsEditor                                     Secure
-SASDeploymentManager                    SASPrivateJavaRuntimeEnvironment                         wrapper.conf
-SASDeploymentTesterClient               SASSecureJava
-migrationuser@awaps1seuci001[SASHome] $ cd SASFoundation/
-migrationuser@awaps1seuci001[SASFoundation] $ ls
-9.4
-migrationuser@awaps1seuci001[SASFoundation] $ cd 9.4/
-migrationuser@awaps1seuci001[9.4] $ ls
-autoexec.sas  cmacros  install   nls                        perl     sasautos  sasmsg    sastest       sasv9_local.cfg  sasv9_rrsc.cfg  u8         X11
-bin           dbcs     installs  orig_sasv9.cfg_orig        samples  sasexe    saspgm    sasv9.cfg     sasv9_othrs.cfg  sasv9_sbim.cfg  ucmacros
-build         dtest    misc      orig_sasv9_local.cfg_orig  sas      sashelp   sassetup  sasv9_dw.cfg  sasv9_ra.cfg     setinit.sas     utilities
-migrationuser@awaps1seuci001[9.4] $ cd utilities/
-migrationuser@awaps1seuci001[utilities] $ ls
-bin  man  src
-migrationuser@awaps1seuci001[utilities] $ cd bin/
-migrationuser@awaps1seuci001[bin] $ ls
-authcustom.so   bdm        elssrv   kj2e         patchname   sasauth.conf   sas-services-daemon          saswujms    tkdef.so       tkrproxy
-authgss.so      cfgpeh     gridrun  ks2e         rbrowser    sasgsub        sas-services-daemon.conf     setuid      tkdfasrv       tkrunas
-authldapnss.so  cleanwork  jproxy   launcher     redirStdIO  sasmailer      sas-services-daemon.init     setuid.sh   tkdocsetup     tks3client
-authldap.so     cntspawn   ke2j     motifxsassm  reshelper   sasm.elm.mime  sas-services-daemon.service  systeminfo  tkfixmachlist  tkssh
-authpam.so      elsconf    ke2s     objspawn     sasauth     sasperm        sasumgmt                     tkbridge    tkgridmon      vercon
-migrationuser@awaps1seuci001[bin] $
+migrationuser@awaps1seuci001[sas] $ cd ..
+migrationuser@awaps1seuci001[/] $ ls
+amazon-ssm-agent.rpm.sig  Bank_prof  boot       Cards_mart  etc         lib    nsr      proc           root  SAS_Soft_Depot  SCBBank   sys         var
+Archive                   Bases      Bureau     Cards_prof  Fulfilment  lib64  opt      q              RRSC  saswork         SCBCards  syslogconf
+Bank                      BB         Campaigns  cop         home        media  PASSPOL  RA             run   SBIM            slift     tmp
+Bank_mart                 bin        Cards      dev         home1       mnt    Policy   Reg_reporting  sas   sbin            srv       usr
+migrationuser@awaps1seuci001[/] $ pwd
+/
+migrationuser@awaps1seuci001[/] $ nohup /sas/SASHome/SASFoundation/9.4/utilities/bin/cntspawn -service 5030 &
+[1] 11655
+migrationuser@awaps1seuci001[/] $ nohup: ignoring input and appending output to ‘/home/migrationuser/nohup.out’
+nohup: failed to run command ‘/sas/SASHome/SASFoundation/9.4/utilities/bin/cntspawn’: No such file or directory
 
 
 
