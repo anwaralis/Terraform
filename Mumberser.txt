@@ -8,113 +8,27 @@ HKLVATAPQ737.hk.standardchartered.com	10.7.30.129	Dev
  	 	 
 HKLVATAPQ738.hk.standardchartered.com	10.7.30.130	Dev
 
+migrationuser@awaps1seuci001[~] $ netstat -tnlp | grep sas
+(No info could be read for "-p": geteuid()=8363 but you should be root.)
+migrationuser@awaps1seuci001[~] $ sudo su
 
-migrationuser@awaps1seuci001[~] $ nslookup hklvatapq734.hk.standardchartered.com
-Server:         10.137.128.194
-Address:        10.137.128.194#53
+Analysing the system state now
 
-Non-authoritative answer:
-Name:   hklvatapq734.hk.standardchartered.com
-Address: 10.7.30.126
+Comparing the results between /root/sysstate/pre /root/sysstate/post :
+cpu                  Pass
+memory               Pass
+swap                 Pass
+pci                  Pass
+nic                  Pass
+disk                 Pass
+netstat              Pass
+kernel               Pass
+kernelboot           Pass
+mount                Pass
+root@awaps1seuci001[migrationuser] # netstat -tnlp | grep sas
+root@awaps1seuci001[migrationuser] # ss -tnlp | grep 5030
+root@awaps1seuci001[migrationuser] #
 
-migrationuser@awaps1seuci001[~] $ nslookup hklvatapq735.hk.standardchartered.com
-Server:         10.137.128.194
-Address:        10.137.128.194#53
-
-Non-authoritative answer:
-Name:   hklvatapq735.hk.standardchartered.com
-Address: 10.7.30.127
-
-migrationuser@awaps1seuci001[~] $ nslookup hklvatapq736.hk.standardchartered.com
-Server:         10.137.128.194
-Address:        10.137.128.194#53
-
-Non-authoritative answer:
-Name:   hklvatapq736.hk.standardchartered.com
-Address: 10.7.30.128
-
-migrationuser@awaps1seuci001[~] $ nslookup hklvatapq737.hk.standardchartered.com
-Server:         10.137.128.194
-Address:        10.137.128.194#53
-
-Non-authoritative answer:
-Name:   hklvatapq737.hk.standardchartered.com
-Address: 10.7.30.129
-
-migrationuser@awaps1seuci001[~] $ nslookup hklvatapq738.hk.standardchartered.com
-Server:         10.137.128.194
-Address:        10.137.128.194#53
-
-Non-authoritative answer:
-Name:   hklvatapq738.hk.standardchartered.com
-
-
-
-
-for ip in 10.7.30.126 10.7.30.127 10.7.30.128 10.7.30.129 10.7.30.130; do
-  echo "Testing $ip ..."
-  nc -zv $ip 7551
-  nc -zv $ip 8561
-  nc -zv $ip 443
-  echo "---------------------------"
-done
-
-Address: 10.7.30.130
-
-migrationuser@awaps1seuci001[~] $
-
-
-
-migrationuser@awaps1seuci001[~] $ for ip in 10.7.30.126 10.7.30.127 10.7.30.128 10.7.30.129 10.7.30.130; do
->   echo "Testing $ip ..."
->   nc -zv $ip 7551
->   nc -zv $ip 8561
->   nc -zv $ip 443
->   echo "---------------------------"
-> done
-Testing 10.7.30.126 ...
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
----------------------------
-Testing 10.7.30.127 ...
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
----------------------------
-Testing 10.7.30.128 ...
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
----------------------------
-Testing 10.7.30.129 ...
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
----------------------------
-Testing 10.7.30.130 ...
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
-Ncat: Version 7.50 ( https://nmap.org/ncat )
-Ncat: Connection timed out.
----------------------------
-
-
-"Please confirm if outbound traffic from awaps1seuci001 to 10.7.30.126-130 on TCP ports 443, 7551, 8561 is allowed from the Security Group and NACL perspective. If unsure, temporarily open all outbound to those IPs for test.
 
 
  
