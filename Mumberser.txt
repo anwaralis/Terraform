@@ -68,6 +68,12 @@ migrationuser@awaps1seuci001[/] $ nohup: ignoring input and appending output to 
 nohup: failed to run command ‘/sas/SASHome/SASFoundation/9.4/utilities/bin/cntspawn’: No such file or directory
 
 
+migrationuser@awaps1seuci001[/] $ nohup /sas/sasinst/SASHome/SASFoundation/9.4/utilities/bin/cntspawn -service 5030 &
+[1] 12152
+migrationuser@awaps1seuci001[/] $ nohup: ignoring input and appending output to ‘/home/migrationuser/nohup.out’
+
+
+
 
 
  
