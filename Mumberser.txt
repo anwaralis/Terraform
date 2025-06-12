@@ -34,6 +34,60 @@ root      9940  9636  0 14:40 pts/0    00:00:00 grep --color=auto -i spawn
 root@awaps1seuci001[migrationuser] #
 
 
+migrationuser@awaps1seuci001[~] $ ls
+migrationuser@awaps1seuci001[~] $ cd /home
+migrationuser@awaps1seuci001[home] $ ls
+1577341   a1307847  a1491047  a1545123  a1562977  a1595603  a1608080  a1621249  a1635337  a1646944  a1663901  a2008251  a8190137  geneossup      sas
+a1159451  a1310045  a1521362  a1546006  a1566313  a1599647  a1610491  a1623681  a1636577  a1647036  a1664197  a2008290  a8190649  infra1         sasdemo
+a1179935  a1330021  a1525650  a1551103  a1567240  a1599977  a1612862  a1624143  a1638720  a1647177  a1665419  a2008515  a8192058  infra2         sassrv
+a1197986  a1357193  a1526131  a1551466  a1567478  a1600623  a1613594  a1624454  a1639501  a1647569  a1665987  a2008875  a8194845  INRA_usrs      testsas
+a1199133  a1404768  a1526160  a1552493  a1568468  a1600679  a1615014  a1624861  a1639782  a1647933  a1667215  a2010567  a8195096  INW_users      tideway
+a1200180  a1413999  a1528481  a1553780  a1568472  a1602045  a1615125  a1626706  a1640169  a1649621  a1669638  a2013788  a8199331  itscadm        umsmon
+a1209947  a1422290  a1530959  a1554133  a1570924  a1603701  a1616658  a1628259  a1640173  a1649823  a2002124  a2014330  a8201275  jbossadm       unixsa
+a1214241  a1439421  a1532637  a1556628  a1573299  a1604967  a1617324  a1629283  a1641470  a1650981  a2002844  a2015268  a8203799  migrationuser
+a1220693  a1441388  a1533705  a1556769  a1581750  a1606026  a1617906  a1631717  a1641652  a1651405  a2003690  a2015306  distadm1  pwdmanid
+a1240235  a1448328  a1534056  a1559626  a1583490  a1606721  a1620365  a1633530  a1645417  a1653551  a2005819  a2018904  dnsmasq   qgscan
+a1256011  a1470408  a1536816  a1559840  a1587278  a1607309  a1620855  a1633588  a1645771  a1662475  a2006199  a2019511  emerg1    RAO_Dw_Usrs
+a1271899  a1481087  a1538544  a1560118  a1587578  a1607352  a1620879  a1634133  a1645841  a1663447  a2007858  a2024578  emerg2    RAO_Usrs
+a1288694  a1482121  a1543324  a1562661  a1590495  a1607697  a1621118  a1635246  a1645847  a1663691  a2008094  a8102358  geneos    RRS_usrs
+migrationuser@awaps1seuci001[home] $ cd /sas
+migrationuser@awaps1seuci001[sas] $ ls
+Install.txt  sasinst
+migrationuser@awaps1seuci001[sas] $ cd sasinst/
+migrationuser@awaps1seuci001[sasinst] $ ls
+SASHome  SASHome.tar
+migrationuser@awaps1seuci001[sasinst] $ cd SASHome/
+migrationuser@awaps1seuci001[SASHome] $ ls
+deploymntreg                            SASFoundation                                            SASSecureJavaM3
+InstallMisc                             SASHadoopConfigurationLibraries                          SASSecureJavaM4
+install.properties                      sas.java.ext.config                                      SASSecureJavaM5
+licenses                                SASODBCDriversfortheWebInfrastructurePlatformDataServer  SASSecurityCertificateFramework
+perms.sh                                SASODSGraphicsCRenderer                                  sassw.config
+ReportFontsforClients                   SASODSGraphicsDesigner                                   SASVersionedJarRepository
+SAS94_9CL8HR_11600037_LINUX_X86-64.txt  SASODSGraphicsEditor                                     Secure
+SASDeploymentManager                    SASPrivateJavaRuntimeEnvironment                         wrapper.conf
+SASDeploymentTesterClient               SASSecureJava
+migrationuser@awaps1seuci001[SASHome] $ cd SASFoundation/
+migrationuser@awaps1seuci001[SASFoundation] $ ls
+9.4
+migrationuser@awaps1seuci001[SASFoundation] $ cd 9.4/
+migrationuser@awaps1seuci001[9.4] $ ls
+autoexec.sas  cmacros  install   nls                        perl     sasautos  sasmsg    sastest       sasv9_local.cfg  sasv9_rrsc.cfg  u8         X11
+bin           dbcs     installs  orig_sasv9.cfg_orig        samples  sasexe    saspgm    sasv9.cfg     sasv9_othrs.cfg  sasv9_sbim.cfg  ucmacros
+build         dtest    misc      orig_sasv9_local.cfg_orig  sas      sashelp   sassetup  sasv9_dw.cfg  sasv9_ra.cfg     setinit.sas     utilities
+migrationuser@awaps1seuci001[9.4] $ cd utilities/
+migrationuser@awaps1seuci001[utilities] $ ls
+bin  man  src
+migrationuser@awaps1seuci001[utilities] $ cd bin/
+migrationuser@awaps1seuci001[bin] $ ls
+authcustom.so   bdm        elssrv   kj2e         patchname   sasauth.conf   sas-services-daemon          saswujms    tkdef.so       tkrproxy
+authgss.so      cfgpeh     gridrun  ks2e         rbrowser    sasgsub        sas-services-daemon.conf     setuid      tkdfasrv       tkrunas
+authldapnss.so  cleanwork  jproxy   launcher     redirStdIO  sasmailer      sas-services-daemon.init     setuid.sh   tkdocsetup     tks3client
+authldap.so     cntspawn   ke2j     motifxsassm  reshelper   sasm.elm.mime  sas-services-daemon.service  systeminfo  tkfixmachlist  tkssh
+authpam.so      elsconf    ke2s     objspawn     sasauth     sasperm        sasumgmt                     tkbridge    tkgridmon      vercon
+migrationuser@awaps1seuci001[bin] $
+
+
 
 
  
