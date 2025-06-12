@@ -74,6 +74,17 @@ migrationuser@awaps1seuci001[/] $ nohup: ignoring input and appending output to 
 
 
 
+So I reffered some SAS documents, what I can say is inorder for our SAS staging server to accept any macros (script) from SAS Viya portal/server, we need to first start "cntspawn" from ourn staging server, and make him listen to port of our choice lets say 5030:
+
+
+
+nohup /sas/sasinst/SASHome/SASFoundation/9.4/utilities/bin/cntspawn -service 5030 &
+
+
+Now once the service is up and running and listeing to 5030, we can then maybe try from the SAS Viya portal to run that script 
+
+
+
 
 
  
