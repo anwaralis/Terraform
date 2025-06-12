@@ -29,6 +29,11 @@ root@awaps1seuci001[migrationuser] # netstat -tnlp | grep sas
 root@awaps1seuci001[migrationuser] # ss -tnlp | grep 5030
 root@awaps1seuci001[migrationuser] #
 
+root@awaps1seuci001[migrationuser] # ps -ef | grep -i spawn
+root      9940  9636  0 14:40 pts/0    00:00:00 grep --color=auto -i spawn
+root@awaps1seuci001[migrationuser] #
+
+
 
 
  
