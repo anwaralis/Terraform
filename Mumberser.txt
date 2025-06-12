@@ -87,6 +87,22 @@ migrationuser@awaps1seuci001[~] $ ps -ef | grep cntspawn
 migrati+ 14599 14524  0 15:21 pts/0    00:00:00 grep --color=auto cntspawn
 migrationuser@awaps1seuci001[~] $
 
+migrationuser@awaps1seuci001[~] $ ps -ef | grep cntspawn
+migrati+ 14599 14524  0 15:21 pts/0    00:00:00 grep --color=auto cntspawn
+migrationuser@awaps1seuci001[~] $ cat ~/nohup.out
+Failed to initialize cradle support
+SAH201001I Server SAS Connect Spawner, State, starting
+
+SAS Connect Spawner version 9.40 (build date: Nov 19 2019)
+Copyright (C) 2011-2013, SAS Institute Inc., Cary, NC, USA. All Rights Reserved
+ERROR: Unable to obtain IP addresses for host awaps1seuci001.
+ERROR: Host name resolution failed
+ERROR: Host name resolution failed
+ERROR: Unable to load extension: (tkiomsvc)
+ERROR: The object server failed to initialize.
+ERROR: Unable to initiate the IOM run-time.
+migrationuser@awaps1seuci001[~] $
+
 
 
 
