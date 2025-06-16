@@ -1,31 +1,11 @@
-Hi Yogita,
+Dear All,
 
-Please find the following :
+As discussed last week, waiting for your input on below open items for these Country applications as having the challenge with mandatory controls submission like SLA/OLA, Capacity Plan, DR plan etc.
 
-1. Business Use Cases – 
+EUC - @More, Yogita / Anwar share the list of EUC application with summary details to further check with Assurance team on the limitations/challenge for EUC.
 
-1.	Regulatory Reporting – around 40 returns
-2.	Business Reporting – 100+ MIS and reports
-3.	Business Acceleration through data, analytics and campaigns – 300+ monthly activities
-4.	Model development for Risk and Marketing by SCMAC CoE
-5.	Digital Sales acceleration for India
-6.	Sales productivity and revenue / ROTE dashboards
-
-2. Business users – 20 users in India RA and Digital teams, 14 users in India SBIM, ~10 users in Group SBIM, another ~10 users across NFRR COE team, IN CTM, SCMAC : in total – ~54
-
-3. Software Inventory – this software has only 1 Software as far as I know, which is Statistical Application Software (SAS). Requesting Jai to confirm. <JS: Agree>
-
-4. Jobs / Scripts executed – I am attaching a sample here for your view. There are thousands of such codes available. Let me know what you need. This is a type of SQL query at the base level.
-
-5. Interface – we have a SAS Viya application on our desktop. We connect to the server with a remote sign-on (viz. below). I don’t think this server interfaces with any other system. Requesting Jai to confirm. <JS: Agree>
-
-SignOff; 
-%Let Unix = 10.128.48.105 5030; 
-Options Remote = Unix Comamid = tcp; 
-SignOn UserId = _Prompt_;
+Smart Mutual - @Ferreira, Sydney Leslie / @Khushboo, Divya (Mohini) to check with the respective production team and come up with these mandatory control evidences. If required seek help from @Joshi, Piyush.
 
 
-6. EUC ID – based on what I know, this server does not have an EUC ID. I had raised this to Yousuf back in 2020 and 2021. I believe Prem Nazir (who used to look into this earlier) or Anitha Nazareth can confirm this. Again, requesting Jai to confirm.
-
-Regards,
-Rajarshi
+Thanks and regards,
+Sumitra
