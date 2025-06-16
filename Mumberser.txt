@@ -1,11 +1,10 @@
-Dear All,
+Dear Sumitra,
 
-As discussed last week, waiting for your input on below open items for these Country applications as having the challenge with mandatory controls submission like SLA/OLA, Capacity Plan, DR plan etc.
+As discussed, please find attached the document detailing the functional overview and summary of the SAS EUC application under Phase 1. This is the only EUC application currently hosted in the Chennai Data Center as part of Phase 1. The document provides insights into its functionality, user interaction methods, and core business use cases.
 
-EUC - @More, Yogita / Anwar share the list of EUC application with summary details to further check with Assurance team on the limitations/challenge for EUC.
+For Phase 2, which includes 90+ applications hosted in the Mumbai Data Center (many of which are vendor-managed), we are in the process of gathering the required details. We will share the corresponding documentation and inputs shortly.
 
-Smart Mutual - @Ferreira, Sydney Leslie / @Khushboo, Divya (Mohini) to check with the respective production team and come up with these mandatory control evidences. If required seek help from @Joshi, Piyush.
+Please let us know if you need any further information.
 
-
-Thanks and regards,
-Sumitra
+Best regards,
+Anwar Shaikh
