@@ -79,3 +79,10 @@ DevOps Engineer – \[Project/Team Name]
 
 Let me know if you want a version with cc placeholders or follow-up text if no response is received.
 
+
+
+Remote login on SAS using SAS Viya
+Sample code run
+WinSCP login
+Putty Login
+
