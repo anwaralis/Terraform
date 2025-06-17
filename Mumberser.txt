@@ -1,88 +1,13 @@
-Dear Sumitra,
+HI Yogita,
 
-As discussed, please find attached the document detailing the functional overview and summary of the SAS EUC application under Phase 1. This is the only EUC application currently hosted in the Chennai Data Center as part of Phase 1. The document provides insights into its functionality, user interaction methods, and core business use cases.
+I think the port number for India server is defined by you.
 
-For Phase 2, which includes 90+ applications hosted in the Mumbai Data Center (many of which are vendor-managed), we are in the process of gathering the required details. We will share the corresponding documentation and inputs shortly.
+You can raise the NSSR for below dev server connection to AWS staging server.
 
-Please let us know if you need any further information.
+HKLVATAPQ734.hk.standardchartered.com  10.7.30.126 
+HKLVATAPQ735.hk.standardchartered.com  10.7.30.127 
+HKLVATAPQ736.hk.standardchartered.com  10.7.30.128 
+HKLVATAPQ737.hk.standardchartered.com  10.7.30.129 
+HKLVATAPQ738.hk.standardchartered.com  10.7.30.130
 
-Best regards,
-Anwar Shaikh
-
-
-
-
-HKLVATAPQ734.hk.standardchartered.com	10.7.30.126	Dev
- 	 	 
-HKLVATAPQ735.hk.standardchartered.com	10.7.30.127	Dev
- 	 	 
-HKLVATAPQ736.hk.standardchartered.com	10.7.30.128	Dev
- 	 	 
-HKLVATAPQ737.hk.standardchartered.com	10.7.30.129	Dev
- 	 	 
-HKLVATAPQ738.hk.standardchartered.com	10.7.30.130	Dev
-
-
-
-
-Certainly! Here's an updated version of **Point 3** with your input incorporated more clearly and professionally:
-
----
-
-**3. SPOC for SAS Viya Environment & Access**
-Since there appears to be confusion across stakeholders regarding which **environment (Dev or Prod)** to use, and which **user account** or credentials are applicable, could you please help by sharing the contact of a **SPOC who is responsible for managing SAS Viya infrastructure and access-related queries**?
-Having a single point of contact will help streamline coordination and avoid further delays.
-
----
-
-### Full Revised Email with Updated Point 3
-
----
-
-**Subject:** Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
-
-Dear \[Name],
-
-As part of our current testing initiative for SAS Viya connectivity from the staging environment, I am trying to move forward with the firewall request setup. However, there are a few critical dependencies that require your confirmation before I can proceed.
-
-Kindly help with the following:
-
-1. **Environment Confirmation**
-   Please confirm **which SAS Viya environment** (Dev or Prod) I should use for testing remote connectivity from the staging SAS server.
-
-   * If Dev, can I proceed with the following hosts/IPs as discussed earlier?
-
-     ```
-     HKLVATAPQ734 (10.7.30.126)
-     HKLVATAPQ735 (10.7.30.127)
-     HKLVATAPQ736 (10.7.30.128)
-     HKLVATAPQ737 (10.7.30.129)
-     HKLVATAPQ738 (10.7.30.130)
-     ```
-
-2. **Port Details**
-   My cloud team has requested **specific port numbers** (not generic ranges) to configure the firewall rules.
-   Could you please confirm the **exact ports** used by SAS Viya on the selected environment for remote SAS/CONNECT access or API access (e.g., `cntspawn`, `sasspawner`, or HTTPS port)?
-
-3. **SPOC for SAS Viya Environment & Access**
-   Since there appears to be confusion across stakeholders regarding which **environment (Dev or Prod)** to use, and which **user account** or credentials are applicable, could you please help by sharing the contact of a **SPOC who is responsible for managing SAS Viya infrastructure and access-related queries**?
-   Having a single point of contact will help streamline coordination and avoid further delays.
-
-Your timely input on this is essential to move forward with testing. Please let me know at the earliest.
-
-Best regards,
-**Anwar Shaikh**
-DevOps Engineer – \[Project/Team Name]
-\[Phone number (optional)]
-
----
-
-Let me know if you want a version with cc placeholders or follow-up text if no response is received.
-
-
-
-Remote login on SAS using SAS Viya
-Sample code run
-WinSCP login
-Putty Login
-
+@Srinivasan, Kamalakannan, who manages the ID for SAS Viya in brown dev? Yogita is requesting for an ID for testing
