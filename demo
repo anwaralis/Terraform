@@ -155,3 +155,9 @@ SAS program executes without errors. The log confirms dataset creation and `proc
 Let me know if you'd like this in Excel/ADO format or need separate expected results for each step.
 
 
+
+This SAS backend server hosts analytical and reporting workloads for EUC applications, enabling end-users to run ad-hoc SAS programs, generate reports, and perform data analysis on localized datasets."
+
+Let me know if you want to tailor it specifically for your application like “EUC-SCBIN(51212)” or include server location or team details
+
+
