@@ -110,3 +110,48 @@ root@ip-10-137-128-246[migrationuser] # cat test.lst
                                                            1     10    50
 root@ip-10-137-128-246[migrationuser] #
 
+
+
+
+
+
+
+Got it! Here's a step-by-step breakdown you can paste into your ADO test suite under the **Test Steps / Actions** section:
+
+---
+
+### **Title**: Verify SAS 9.4 Functionality on Staging Linux Server via CLI
+
+#### **Steps**:
+
+1. Login to the staging SAS server using PuTTY with SAS credentials.
+2. Switch to root user using `sudo su`.
+3. Navigate to home directory: `cd /home/migrationuser`
+4. Create a test SAS program file: `nano test.sas`
+5. Add the following SAS code to the file and save:
+
+   ```sas
+   data test;
+       x = 10;
+       y = x * 5;
+   run;
+
+   proc print data=test;
+   run;
+   ```
+6. Execute the SAS program using the full SAS binary path:
+
+   ```bash
+   /sas/sasinst/SASHome/SASFoundation/9.4/sas test.sas -log test.log -print test.lst
+   ```
+7. Confirm SAS executed successfully by reviewing output in `test.log` and `test.lst`.
+
+#### **Expected Result**:
+
+SAS program executes without errors. The log confirms dataset creation and `proc print` output lists `x = 10`, `y = 50`.
+
+---
+
+Let me know if you'd like this in Excel/ADO format or need separate expected results for each step.
+
+
