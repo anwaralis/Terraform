@@ -1,66 +1,49 @@
-This repo contains terraform files
+migrationuser@ip-10-137-128-246[home] $ ls
+1577341   a1307847  a1491047  a1545123  a1562977  a1595603  a1608080  a1621249  a1635337  a1646944  a1663901  a2008251  a8190137    geneos         RRS_usrs
+a1159451  a1310045  a1521362  a1546006  a1566313  a1599647  a1610491  a1623681  a1636577  a1647036  a1664197  a2008290  a8190649    geneossup      sas
+a1179935  a1330021  a1525650  a1551103  a1567240  a1599977  a1612862  a1624143  a1638720  a1647177  a1665419  a2008515  a8192058    infra1         sasdemo
+a1197986  a1357193  a1526131  a1551466  a1567478  a1600623  a1613594  a1624454  a1639501  a1647569  a1665987  a2008875  a8194845    infra2         sassrv
+a1199133  a1404768  a1526160  a1552493  a1568468  a1600679  a1615014  a1624861  a1639782  a1647933  a1667215  a2010567  a8195096    INRA_usrs      testsas
+a1200180  a1413999  a1528481  a1553780  a1568472  a1602045  a1615125  a1626706  a1640169  a1649621  a1669638  a2013788  a8199331    INW_users      tideway
+a1209947  a1422290  a1530959  a1554133  a1570924  a1603701  a1616658  a1628259  a1640173  a1649823  a2002124  a2014330  a8201275    itscadm        umsmon
+a1214241  a1439421  a1532637  a1556628  a1573299  a1604967  a1617324  a1629283  a1641470  a1650981  a2002844  a2015268  a8203799    jbossadm       unixsa
+a1220693  a1441388  a1533705  a1556769  a1581750  a1606026  a1617906  a1631717  a1641652  a1651405  a2003690  a2015306  cloud-user  migrationuser
+a1240235  a1448328  a1534056  a1559626  a1583490  a1606721  a1620365  a1633530  a1645417  a1653551  a2005819  a2018904  distadm1    pwdmanid
+a1256011  a1470408  a1536816  a1559840  a1587278  a1607309  a1620855  a1633588  a1645771  a1662475  a2006199  a2019511  dnsmasq     qgscan
+a1271899  a1481087  a1538544  a1560118  a1587578  a1607352  a1620879  a1634133  a1645841  a1663447  a2007858  a2024578  emerg1      RAO_Dw_Usrs
+a1288694  a1482121  a1543324  a1562661  a1590495  a1607697  a1621118  a1635246  a1645847  a1663691  a2008094  a8102358  emerg2      RAO_Usrs
+migrationuser@ip-10-137-128-246[home] $ sudo su
 
+Analysing the system state now
 
-efs spec to add in t2apps pipeline
-efs_spec = {
-  euc-ba = {
-    override_az_selector                  = []
-    override_active_standby_mode_enabled  = false
-    override_multi_region_enabled         = false
-    override_multi_az_enabled             = true
-    override_new_replication_config       = true
-    override_efs_backup_primary_enabled   = true
-    override_efs_backup_secondary_enabled = false
-    override_access_points = [
-      {
-        access_point_name = "ap1"
-        efs_dir_path      = "/app1/nfs"
-      }
-    ]
-  }
-}
- 
-
-##---
-## Global Configuration
-##-
-account_id       = "974105205880"
-project          = "euc-scbin"
-environment      = "staging"
-primary_region   = "ap-south-1"
-secondary_region = ""
-az_selector = [
-  "ap-south-1a",
-  "ap-south-1b",
-  "ap-south-1c",
-]
-
-tag_map = {
-  pattern = "itp.pattern.cd-int-sr-001"
-  version = "v100.2"
-}
-
-mandatory_tag_map = {
-  "active.compliance.account"              = "974105205880"
-  "active.compliance.business-regions"     = "mumbai"
-  "active.compliance.ibs"                  = "false"
-  "active.compliance.org-unit"             = "nonprod-green"
-  "active.cost-allocation.cost-center"     = "na"
-  "active.cost-allocation.lob"             = ""
-  "active.cost-allocation.sub-lob"         = ""
-  "active.operations.environment"          = "staging"
-  "active.operations.environment-sub-type" = "staging" // Environment
-  "active.platform.application-id"         = "51212"       // ITAM ID
-  "active.platform.application-name"       = "euc-scbin"
-  "active.platform.cloud-onboarding-id"    = "2504002" // LEAP request ID
-  "active.platform.criticality"            = "2"
-  "active.platform.material"               = "na"
-  "passive.compliance.hosting-regions"     = "mumbai"
-  "passive.operations.account-type"        = "na"
-  "passive.operations.ito-unit"            = "na"
-}
-
-## service level configuration
-
-# To be completed
-
+Comparing the results between /root/sysstate/pre /root/sysstate/post :
+cpu                  Pass
+memory               Pass
+swap                 Pass
+pci                  Pass
+nic                  Pass
+disk                 Pass
+netstat              Pass
+kernel               Pass
+kernelboot           Pass
+mount                Pass
+root@ip-10-137-128-246[home] # nano test.sas
+root@ip-10-137-128-246[home] # ls
+1577341   a1307847  a1491047  a1545123  a1562977  a1595603  a1608080  a1621249  a1635337  a1646944  a1663901  a2008251  a8190137    geneos         RRS_usrs
+a1159451  a1310045  a1521362  a1546006  a1566313  a1599647  a1610491  a1623681  a1636577  a1647036  a1664197  a2008290  a8190649    geneossup      sas
+a1179935  a1330021  a1525650  a1551103  a1567240  a1599977  a1612862  a1624143  a1638720  a1647177  a1665419  a2008515  a8192058    infra1         sasdemo
+a1197986  a1357193  a1526131  a1551466  a1567478  a1600623  a1613594  a1624454  a1639501  a1647569  a1665987  a2008875  a8194845    infra2         sassrv
+a1199133  a1404768  a1526160  a1552493  a1568468  a1600679  a1615014  a1624861  a1639782  a1647933  a1667215  a2010567  a8195096    INRA_usrs      testsas
+a1200180  a1413999  a1528481  a1553780  a1568472  a1602045  a1615125  a1626706  a1640169  a1649621  a1669638  a2013788  a8199331    INW_users      test.sas
+a1209947  a1422290  a1530959  a1554133  a1570924  a1603701  a1616658  a1628259  a1640173  a1649823  a2002124  a2014330  a8201275    itscadm        tideway
+a1214241  a1439421  a1532637  a1556628  a1573299  a1604967  a1617324  a1629283  a1641470  a1650981  a2002844  a2015268  a8203799    jbossadm       umsmon
+a1220693  a1441388  a1533705  a1556769  a1581750  a1606026  a1617906  a1631717  a1641652  a1651405  a2003690  a2015306  cloud-user  migrationuser  unixsa
+a1240235  a1448328  a1534056  a1559626  a1583490  a1606721  a1620365  a1633530  a1645417  a1653551  a2005819  a2018904  distadm1    pwdmanid
+a1256011  a1470408  a1536816  a1559840  a1587278  a1607309  a1620855  a1633588  a1645771  a1662475  a2006199  a2019511  dnsmasq     qgscan
+a1271899  a1481087  a1538544  a1560118  a1587578  a1607352  a1620879  a1634133  a1645841  a1663447  a2007858  a2024578  emerg1      RAO_Dw_Usrs
+a1288694  a1482121  a1543324  a1562661  a1590495  a1607697  a1621118  a1635246  a1645847  a1663691  a2008094  a8102358  emerg2      RAO_Usrs
+root@ip-10-137-128-246[home] # sas test.sas
+bash: sas: command not found
+root@ip-10-137-128-246[home] # which sas
+/usr/bin/which: no sas in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/tss/bin:/opt/tss/itrs:/opt/puppetlabs/bin:/home/migrationuser/.local/bin:/home/migrationuser/bin)
+root@ip-10-137-128-246[home] #
