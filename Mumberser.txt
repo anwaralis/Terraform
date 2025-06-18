@@ -11,3 +11,11 @@ HKLVATAPQ737.hk.standardchartered.com  10.7.30.129
 HKLVATAPQ738.hk.standardchartered.com  10.7.30.130
 
 @Srinivasan, Kamalakannan, who manages the ID for SAS Viya in brown dev? Yogita is requesting for an ID for testing
+
+
+
+/* Simple SAS test script */
+data _null_;
+  put "===== SAS is working fine! =====";
+run;
+
