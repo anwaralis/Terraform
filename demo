@@ -1,26 +1,7 @@
-root@ip-10-137-128-246[home] # cd /sas
-root@ip-10-137-128-246[sas] # ls
-Install.txt  sasinst
-root@ip-10-137-128-246[sas] # cd sasinst/
-root@ip-10-137-128-246[sasinst] # ls
-SASHome  SASHome.tar
-root@ip-10-137-128-246[sasinst] # cd SASHome/
-root@ip-10-137-128-246[SASHome] # ls
-deploymntreg                            SASFoundation                                            SASSecureJavaM3
-InstallMisc                             SASHadoopConfigurationLibraries                          SASSecureJavaM4
-install.properties                      sas.java.ext.config                                      SASSecureJavaM5
-licenses                                SASODBCDriversfortheWebInfrastructurePlatformDataServer  SASSecurityCertificateFramework
-perms.sh                                SASODSGraphicsCRenderer                                  sassw.config
-ReportFontsforClients                   SASODSGraphicsDesigner                                   SASVersionedJarRepository
-SAS94_9CL8HR_11600037_LINUX_X86-64.txt  SASODSGraphicsEditor                                     Secure
-SASDeploymentManager                    SASPrivateJavaRuntimeEnvironment                         wrapper.conf
-SASDeploymentTesterClient               SASSecureJava
-root@ip-10-137-128-246[SASHome] # cd SASFoundation/
-root@ip-10-137-128-246[SASFoundation] # ls
-9.4
-root@ip-10-137-128-246[SASFoundation] # cd 9.4
-root@ip-10-137-128-246[9.4] # ls
-autoexec.sas  cmacros  install   nls                        perl     sasautos  sasmsg    sastest       sasv9_local.cfg  sasv9_rrsc.cfg  u8         X11
-bin           dbcs     installs  orig_sasv9.cfg_orig        samples  sasexe    saspgm    sasv9.cfg     sasv9_othrs.cfg  sasv9_sbim.cfg  ucmacros
-build         dtest    misc      orig_sasv9_local.cfg_orig  sas      sashelp   sassetup  sasv9_dw.cfg  sasv9_ra.cfg     setinit.sas     utilities
-root@ip-10-137-128-246[9.4] #
+data test;
+    x = 10;
+    y = x * 5;
+run;
+
+proc print data=test;
+run;
