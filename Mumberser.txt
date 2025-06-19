@@ -1,3 +1,32 @@
+Hi Anthony/ Kamalakannan,
+
+Still I have not received any update on the SAS Viya’s Dev ID for testing.
+
+Can you please update on this, As this is blocking our testing for Staging.
+
+Best
+
+_______________________________________________________
+Yogita More
+Technology Operation/Country Systems Support
+
+Standard Chartered Bank
+Phone     : 8369139271
+Fonenet  : 
+Email       : Yogita.More@sc.com
+Address  : 3rd Floor, Crescenzo, Behind MCA Ground, BKC, Mumbai – 400 051, India
+Website:    http://www.standardchartered.com
+_______________________________________________________
+(Note: Due to limited external mail access, this mail will not reached to any external mail id).
+
+From: Cheang, Anthony Weng Soon <Anthony-Weng-Soon.Cheang@sc.com> 
+Sent: Tuesday, June 17, 2025 11:25 AM
+To: More, Yogita <Yogita.More@sc.com>; Srinivasan, Kamalakannan <Kamalakannan.Srinivasan@sc.com>
+Cc: Nazareth, Anita <Anita.Nazareth@sc.com>; Singh, Amit <Amit.Singh2@sc.com>; Shanker, Jai <Jai.Shanker@sc.com>; De, Jaidip <Jaidip.De@sc.com>; SAS VIYA Tech <SASVIYATech@sc.com>
+Subject: RE: Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
+
+INTERNAL
+
 HI Yogita,
 
 I think the port number for India server is defined by you.
@@ -10,12 +39,106 @@ HKLVATAPQ736.hk.standardchartered.com  10.7.30.128
 HKLVATAPQ737.hk.standardchartered.com  10.7.30.129 
 HKLVATAPQ738.hk.standardchartered.com  10.7.30.130
 
-@Srinivasan, Kamalakannan, who manages the ID for SAS Viya in brown dev? Yogita is requesting for an ID for testing
+@Srinivasan, Kamalakannan, who manages the ID for SAS Viya in brown dev? Yogita is requesting for an ID for testing. 
+
+Anthony Cheang Weng Soon
+TA - Data technology 
+Standard Chartered Global Business Services Sdn. Bhd.
+Mobile:   +6016 2748475
+Email:    Anthony-weng-soon.cheang@sc.com
+Address: Level 7, Wisma Standard Chartered, Jalan Teknologi 8, Taman Teknologi Malaysia, Bukit Jalil, 57000, Kuala Lumpur
+Website:  www.sc.com/gbs/my
+
+From: More, Yogita <Yogita.More@sc.com> 
+Sent: Tuesday, June 17, 2025 1:17 PM
+To: Cheang, Anthony Weng Soon <Anthony-Weng-Soon.Cheang@sc.com>
+Cc: Nazareth, Anita <Anita.Nazareth@sc.com>; Singh, Amit <Amit.Singh2@sc.com>; Shanker, Jai <Jai.Shanker@sc.com>; De, Jaidip <Jaidip.De@sc.com>
+Subject: RE: Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
+
+INTERNAL
+
+Hi Anthony,
+
+As part of the testing, we’ll be connecting the staging env of SAS server, which is hosted on AWS cloud, to the below mentioned Dev env, so it will be staging to dev. Also, if this is possible I’ll need to know what port number should we use to run login SAS script from SAS Viya:
+
+Example script:
+       %Let unix=IPaddress    5030(this is the port number in this example);
+  Options Remote = Unix comamid = tcp ;
+  Signon Userid = . passwd = ;
+
+Correct port number is required so that we can create a firewall request to enable that port number, this will allow SAS Viya dev to send request to our AWS staging server. Also need to know which user ID can I use for this testing.
+
+Best,
+Anwar Shaikh
+
+From: Cheang, Anthony Weng Soon <Anthony-Weng-Soon.Cheang@sc.com> 
+Sent: Monday, June 16, 2025 5:04 PM
+To: More, Yogita <Yogita.More@sc.com>
+Cc: Nazareth, Anita <Anita.Nazareth@sc.com>; Singh, Amit <Amit.Singh2@sc.com>; Shanker, Jai <Jai.Shanker@sc.com>; De, Jaidip <Jaidip.De@sc.com>
+Subject: RE: Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
+
+INTERNAL
+
+Hi Yogita,
+
+I assume you are connecting dev to dev ? If yes, below dev is correct (this is brown env). What info do you need?
 
 
 
-/* Simple SAS test script */
-data _null_;
-  put "===== SAS is working fine! =====";
-run;
+Anthony Cheang Weng Soon
+TA - Data technology 
+Standard Chartered Global Business Services Sdn. Bhd.
+Mobile:   +6016 2748475
+Email:    Anthony-weng-soon.cheang@sc.com
+Address: Level 7, Wisma Standard Chartered, Jalan Teknologi 8, Taman Teknologi Malaysia, Bukit Jalil, 57000, Kuala Lumpur
+Website:  www.sc.com/gbs/my
 
+From: Shanker, Jai <Jai.Shanker@sc.com> 
+Sent: Monday, June 16, 2025 6:54 PM
+To: More, Yogita <Yogita.More@sc.com>; De, Jaidip <Jaidip.De@sc.com>; Cheang, Anthony Weng Soon <Anthony-Weng-Soon.Cheang@sc.com>
+Cc: Nazareth, Anita <Anita.Nazareth@sc.com>; Singh, Amit <Amit.Singh2@sc.com>
+Subject: RE: Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
+
+INTERNAL
+
+++ @Cheang, Anthony Weng Soon
+
+From: More, Yogita <Yogita.More@sc.com> 
+Sent: Monday, June 16, 2025 3:38 PM
+To: De, Jaidip <Jaidip.De@sc.com>
+Cc: Shanker, Jai <Jai.Shanker@sc.com>; Nazareth, Anita <Anita.Nazareth@sc.com>; Singh, Amit <Amit.Singh2@sc.com>; More, Yogita <Yogita.More@sc.com>
+Subject: Required Inputs for SAS Viya Remote Connectivity Testing – Need Clarity on Environment & Ports
+
+INTERNAL
+
+Hi Jaidip,
+
+As part of our current testing initiative for SAS Viya connectivity from the staging environment, I am trying to move forward with the firewall request setup. However, there are a few critical dependencies that require your confirmation before I can proceed.
+
+Kindly help with the following:
+
+1. Environment Confirmation
+   Please confirm which SAS Viya environment (Dev or Prod) I should use for testing remote connectivity from the staging SAS server.
+
+   * If Dev, can I proceed with the following hosts/IPs as discussed earlier?
+
+     ```
+     HKLVATAPQ734 (10.7.30.126)
+     HKLVATAPQ735 (10.7.30.127)
+     HKLVATAPQ736 (10.7.30.128)
+     HKLVATAPQ737 (10.7.30.129)
+     HKLVATAPQ738 (10.7.30.130)
+     ```
+
+2. Port Details
+   My cloud team has requested specific port numbers (not generic ranges) to configure the firewall rules.
+   Could you please confirm the exact ports used by SAS Viya on the selected environment for remote SAS/CONNECT?
+
+3. SPOC for SAS Viya Environment & Access
+   Since there appears to be confusion across stakeholders regarding which environment (Dev or Prod) to use, could you please help by sharing the contact of a SPOC who is responsible for managing SAS Viya infrastructure and access-related queries?
+   Having a single point of contact will help streamline coordination and avoid further delays.
+
+Your timely input on this is essential to move forward with testing. Please let me know at the earliest.
+
+Best regards,
+Anwar Shaikh
